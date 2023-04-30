@@ -172,7 +172,8 @@ print(classification_report(Y_test,predictions))
 ![image](https://user-images.githubusercontent.com/94222288/235370372-42c653ff-ee1d-4397-983e-b2a45338e4bd.png)
 
 ![image](https://user-images.githubusercontent.com/94222288/235370279-28ef7dfb-f7c9-48a3-a862-60cceb221454.png)
-![image](https://user-images.githubusercontent.com/94222288/235370299-95b81192-08cc-43e7-abf0-c968e724547d.png)
+![image](https://user-images.githubusercontent.com/94222288/235370508-43dd0a60-4cb3-476c-a412-cb8952e2e9d2.png)
+
 
 ![image](https://user-images.githubusercontent.com/94222288/235370290-9b71183b-01df-4d7b-91a1-dcc248b49f57.png)
 

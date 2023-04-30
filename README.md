@@ -169,20 +169,29 @@ First five rows
 ![image](https://user-images.githubusercontent.com/94222288/235370244-1ae94218-fdbc-4001-8957-d2c4c416bcfd.png)
 First five rows of x:
 ![image](https://user-images.githubusercontent.com/94222288/235370246-588d91b8-2a6d-4437-a847-40aff290fd92.png)
-unique values of y:
+
+
+First five rows of Y:
 ![image](https://user-images.githubusercontent.com/94222288/235370258-1e5e9ea2-4104-4079-800c-0d78d1dd66a9.png)
-Transforming Categorical to numerical values: 
+
+unique values of y: 
 ![image](https://user-images.githubusercontent.com/94222288/235370262-b16b019b-0eea-4425-8470-470c77534c09.png)
-Predictions:
+
+Transforming Categorical to numerical values:
 ![image](https://user-images.githubusercontent.com/94222288/235370372-42c653ff-ee1d-4397-983e-b2a45338e4bd.png)
-Confusion matrix
+
+
+Predictions:
 ![image](https://user-images.githubusercontent.com/94222288/235370279-28ef7dfb-f7c9-48a3-a862-60cceb221454.png)
-Classification report:
+
+
+Confusion matrix
 ![image](https://user-images.githubusercontent.com/94222288/235370508-43dd0a60-4cb3-476c-a412-cb8952e2e9d2.png)
 
-
+Classification report: 
 ![image](https://user-images.githubusercontent.com/94222288/235370290-9b71183b-01df-4d7b-91a1-dcc248b49f57.png)
 
 
 
 ## RESULT
+Thus, a program to implement Multilayer Perceptron for Multi Classification is successfully created and executed.

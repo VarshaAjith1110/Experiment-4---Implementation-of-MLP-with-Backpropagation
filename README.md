@@ -118,7 +118,62 @@ Normalize our dataset.
 8. Finally, call the functions confusion_matrix(), and the classification_report() in order to evaluate the performance of our classifier.
 
 ## PROGRAM 
+import pandas as pd
+import sklearn
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+
+df = pd.read_csv('IRIS.csv')
+df.head
+
+names = ['sepal-length','sepal-width','petal-length','petal-width','Class']
+`
+# Take first 4 columns ans assign them to variable "X"
+X = df.iloc[:,0:4]
+# Take first 5th columns and assign them to variable "Y". Object dtype refers to strings
+Y = df.select_dtypes(include=[object])
+X.head()
+Y.head()
+
+# Y actually contains all categories or classes
+Y.species.unique()
+
+# Now transforming categorial into numerical values
+le = preprocessing.LabelEncoder()
+Y = Y.apply(le.fit_transform)
+Y.head()
+
+# Train and test split (80% of data into training set and 20% into test data)
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size = 0.20)
+
+# Feature Scaling
+scaler = StandardScaler() 
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+mlp = MLPClassifier(hidden_layer_sizes=(10,10,10),max_iter=1000)
+mlp.fit(X_train,Y_train.values.ravel())
+predictions = mlp.predict(X_test)
+print(predictions)
+
+# Evaluation of algorithm performance in classifying flowers
+print(confusion_matrix(Y_test,predictions))
+print(classification_report(Y_test,predictions))
+
 
 ## OUTPUT 
+![image](https://user-images.githubusercontent.com/94222288/235370244-1ae94218-fdbc-4001-8957-d2c4c416bcfd.png)
+![image](https://user-images.githubusercontent.com/94222288/235370246-588d91b8-2a6d-4437-a847-40aff290fd92.png)
+![image](https://user-images.githubusercontent.com/94222288/235370258-1e5e9ea2-4104-4079-800c-0d78d1dd66a9.png)
+![image](https://user-images.githubusercontent.com/94222288/235370262-b16b019b-0eea-4425-8470-470c77534c09.png)
+![image](https://user-images.githubusercontent.com/94222288/235370279-28ef7dfb-f7c9-48a3-a862-60cceb221454.png)
+![image](https://user-images.githubusercontent.com/94222288/235370299-95b81192-08cc-43e7-abf0-c968e724547d.png)
+
+![image](https://user-images.githubusercontent.com/94222288/235370290-9b71183b-01df-4d7b-91a1-dcc248b49f57.png)
+![image](https://user-images.githubusercontent.com/94222288/235370307-7e1f1189-a3cc-4d6f-977b-5f5c5201dc43.png)
+
 
 ## RESULT
